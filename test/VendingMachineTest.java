@@ -81,6 +81,10 @@ public class VendingMachineTest {
         assertEquals(true,vendingMachine.machineQuantity(1,"Chips"));
         //Tests to return true with candy
         assertEquals(true, vendingMachine.machineQuantity(1, "Candy"));
+
+        //Tests to return false with cola
+        assertEquals(false, vendingMachine.machineQuantity(6, "Cola"));
+
     }
 
 

@@ -129,8 +129,16 @@ public class VendingMachine {
     }
 
     public boolean machineQuantity(int quantityWanted, String productWanted) {
+
+        int _colaQuantity = 5, _chipQuantity = 5, _candyQuantity = 5;
+
         if(productWanted.equalsIgnoreCase("Cola")){
-            return true;
+            if(_colaQuantity - quantityWanted >= 0) {
+                return true;
+            }
+            else{
+                return false;
+            }
         }
         else if(productWanted.equalsIgnoreCase("Chips")){
             return true;
