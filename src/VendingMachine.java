@@ -4,6 +4,10 @@
  */
 public class VendingMachine {
 
+    //Used in machine quantity
+    private int _colaQuantity = 5, _chipQuantity = 5, _candyQuantity = 5;
+    private int pennies = 0;
+
     public double weighCoin(int coinChoice) {
         //Returns weight of Quarter
         if(coinChoice == 1){
@@ -19,6 +23,7 @@ public class VendingMachine {
         }
         //Returns weight of Penny
         else if(coinChoice == 4){
+            pennies++;
             return (.088);
         }
         else{
@@ -105,10 +110,18 @@ public class VendingMachine {
         if (_quarters >= 1) {
             if(_dimes >= 1){
                 if(_nickels >= 1){
-                    return("Quarters: " + _quarters + " Dimes: " + _dimes + " Nickels: " + _nickels);
+                    if(pennies >= 1){
+                        return ("Quarters: " + _quarters + " Dimes: " + _dimes + " Nickels: " + _nickels + " Pennies: " + pennies);
+                    }
+                    else {
+                        return ("Quarters: " + _quarters + " Dimes: " + _dimes + " Nickels: " + _nickels);
+                    }
                 }
-                else {
+                else if(_dimes >= 1 && pennies == 0){
                     return ("Quarters: " + _quarters + " Dimes: " + _dimes);
+                }
+                else{
+                    return("Quarters: " + _quarters + " Pennies: " + pennies);
                 }
             }
             else if(_nickels >= 1){
@@ -120,17 +133,25 @@ public class VendingMachine {
 
         }
         else if (_dimes >= 1) {
-            return ("Dimes: " + _dimes);
+            if(pennies >=1){
+                return ("Dimes: " + _dimes + "Pennies: " +pennies);
+            }
+            else {
+                return ("Dimes: " + _dimes);
+            }
         }
         else {
-            return ("Nickels: " + _nickels);
+            if(pennies >= 1){
+                return ("Nickels: " + _nickels + " Pennies: " + pennies);
+            }
+            else {
+                return ("Nickels: " + _nickels);
+            }
         }
 
     }
 
     public boolean machineQuantity(int quantityWanted, String productWanted) {
-
-        int _colaQuantity = 5, _chipQuantity = 5, _candyQuantity = 5;
 
         if(productWanted.equalsIgnoreCase("Cola")){
             if(_colaQuantity - quantityWanted >= 0) {
@@ -160,5 +181,21 @@ public class VendingMachine {
             return false;
         }
 
+    }
+
+    public void outputSelectionScreen(){
+        System.out.println("Please enter your selection below");
+        System.out.println("Enter 1 for a Cola");
+        System.out.println("Enter 2 for chips");
+        System.out.println("Enter 3 for candy");
+
+    }
+
+    public void outputPaymentScreen(){
+        System.out.println("Please enter your selection below");
+        System.out.println("Enter 1 to insert a quarter");
+        System.out.println("Enter 2 to insert a dime");
+        System.out.println("Enter 3 to insert a nickel");
+        System.out.println("Enter 4 to insert a pennie");
     }
 }
