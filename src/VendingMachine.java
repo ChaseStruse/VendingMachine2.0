@@ -127,4 +127,8 @@ public class VendingMachine {
         }
 
     }
+
+    public boolean machineQuantity(int quantityWanted, String productWanted) {
+        return true;
+    }
 }

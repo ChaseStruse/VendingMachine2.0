@@ -73,5 +73,11 @@ public class VendingMachineTest {
 
     }
 
+    @Test
+    public void testWhenMachineQuantityIsPassedACertainQuantityIfOutOfStockItWillReturnFalse(){
+        //Tests to return true
+        assertEquals(true, vendingMachine.machineQuantity(1, "Cola"));
+    }
+
 
 }
