@@ -141,7 +141,12 @@ public class VendingMachine {
             }
         }
         else if(productWanted.equalsIgnoreCase("Chips")){
-            return true;
+            if(_chipQuantity - quantityWanted >= 0) {
+                return true;
+            }
+            else{
+                return false;
+            }
         }
         else if(productWanted.equalsIgnoreCase("Candy")){
             return true;
