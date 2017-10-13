@@ -45,7 +45,12 @@ public class VendingMachine {
     public String dispenseItems(int colasWanted, int chipsWanted, int candyWanted) {
         if(colasWanted >= 1) {
             if(chipsWanted >= 1){
-                return ("Cola: " + colasWanted + " Chips: " + chipsWanted);
+                if(candyWanted >= 1){
+                    return ("Cola: " + colasWanted + " Chips: " + chipsWanted + " Candy: " + candyWanted);
+                }
+                else{
+                    return ("Cola: " + colasWanted + " Chips: " + chipsWanted);
+                }
             }
             else if(candyWanted >= 1){
                 return("Cola: " + colasWanted + " Candy: " + candyWanted);

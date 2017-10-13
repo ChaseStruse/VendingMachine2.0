@@ -47,6 +47,8 @@ public class VendingMachineTest {
         assertEquals("Cola: 1 Chips: 1", vendingMachine.dispenseItems(1,1,0));
         //1 Cola 0 Chips 1 Candy
         assertEquals("Cola: 1 Candy: 1", vendingMachine.dispenseItems(1,0,1));
+        //1 Cola 1 Chips 1 Candy
+        assertEquals("Cola: 1 Chips: 1 Candy: 1", vendingMachine.dispenseItems(1,1,1));
     }
 
 
