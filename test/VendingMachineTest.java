@@ -12,7 +12,11 @@ public class VendingMachineTest {
 
     @Test
     public void testWhenWeighCoinIsPassedAIntItReturnsTheCorrectCoinWeight(){
+        //For Quarters
         assertEquals(5.67, vendingMachine.WeighCoin(1));
+        //For Dimes
+        assertEquals(2.268, vendingMachine.WeighCoin(2));
+
     }
 
 }

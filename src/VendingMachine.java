@@ -4,7 +4,17 @@
  */
 public class VendingMachine {
 
-    public double WeighCoin(int i) {
-        return(5.67);
+    public double WeighCoin(int coinChoice) {
+
+        if(coinChoice == 1){
+            return(5.67);
+        }
+        else if(coinChoice == 2){
+            return (2.268);
+        }
+        else{
+            return (0);
+        }
+
     }
 }
