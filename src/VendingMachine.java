@@ -42,7 +42,12 @@ public class VendingMachine {
         }
     }
 
-    public String dispenseItems() {
-        return("Cola: 1");
+    public String dispenseItems(int colasWanted, int chipsWanted, int candyWanted) {
+        if(colasWanted == 1) {
+            return ("Cola: " + colasWanted);
+        }
+        else{
+            return("Chips: " + chipsWanted);
+        }
     }
 }

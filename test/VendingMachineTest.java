@@ -37,7 +37,9 @@ public class VendingMachineTest {
     @Test
     public void testWhenDispenseItemsIsPassedCertainItemsItReturnsTheCorrectString(){
         //1 Cola 0 Chips 0 Candy
-        assertEquals("Cola: 1", vendingMachine.dispenseItems());
+        assertEquals("Cola: 1", vendingMachine.dispenseItems(1,0,0));
+        //0 Cola 1 Chips 0 Candy
+        assertEquals( "Chips: 1", vendingMachine.dispenseItems(0,1,0));
     }
 
 
