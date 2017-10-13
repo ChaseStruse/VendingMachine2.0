@@ -12,6 +12,9 @@ public class VendingMachine {
         else if(coinChoice == 2){
             return (2.268);
         }
+        else if(coinChoice == 3){
+            return (5);
+        }
         else{
             return (0);
         }
