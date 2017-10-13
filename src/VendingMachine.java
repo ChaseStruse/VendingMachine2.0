@@ -34,8 +34,11 @@ public class VendingMachine {
         else if(coinWeight == 2.268){
             return(.10);
         }
-        else{
+        else if(coinWeight == 5){
             return(.05);
+        }
+        else{
+            return(0);
         }
     }
 }
