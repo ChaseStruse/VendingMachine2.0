@@ -18,6 +18,8 @@ public class VendingMachineTest {
         assertEquals(2.268, vendingMachine.WeighCoin(2));
         //For Nickels
         assertEquals(5.0, vendingMachine.WeighCoin(3));
+        //For Pennies
+        assertEquals(.088, vendingMachine.WeighCoin(4));
 
     }
 
