@@ -76,13 +76,29 @@ public class VendingMachine {
         int _quarters = 0, _dimes = 0, _nickels = 0;
 
         if(totalChange >= .25) {
-            return ("Quarters: 1");
+            _quarters++;
+            totalChange-=.25;
         }
         else if(totalChange >= .1 && totalChange < .25){
-            return("Dimes: 1");
+            _dimes++;
+            totalChange-=.10;
+        }
+        else if(totalChange >= .05 && totalChange < .10){
+            _nickels++;
+            totalChange-=.05;
         }
         else{
             return(null);
+        }
+
+        if(_quarters >= 1){
+            return("Quarters: " + _quarters);
+        }
+        else if(_dimes >= 1){
+            return ("Dimes: " + _dimes);
+        }
+        else{
+            return("Nickels: " + _nickels);
         }
     }
 }
