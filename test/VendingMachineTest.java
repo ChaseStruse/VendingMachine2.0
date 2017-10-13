@@ -27,6 +27,9 @@ public class VendingMachineTest {
     public void testWhenCoinValueIsPassedTheWeightOfACoinItReturnsTheValueOfThatCoin(){
         //For Quarters
         assertEquals(.25, vendingMachine.CoinValue(vendingMachine.WeighCoin(1)));
+        //For Dimes
+        assertEquals(.10, vendingMachine.CoinValue(vendingMachine.WeighCoin(2)));
+
     }
 
 }

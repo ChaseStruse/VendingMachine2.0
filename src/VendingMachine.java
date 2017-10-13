@@ -28,6 +28,12 @@ public class VendingMachine {
     }
 
     public double CoinValue(double coinWeight) {
-        return(.25);
+        if(coinWeight == 5.67){
+            return(.25);
+        }
+        else{
+            return(.10);
+        }
+
     }
 }
