@@ -73,6 +73,16 @@ public class VendingMachine {
     }
 
     public String returnChange(double totalChange) {
-        return("Quarters: 1");
+        int _quarters = 0, _dimes = 0, _nickels = 0;
+
+        if(totalChange >= .25) {
+            return ("Quarters: 1");
+        }
+        else if(totalChange >= .1 && totalChange < .25){
+            return("Dimes: 1");
+        }
+        else{
+            return(null);
+        }
     }
 }
