@@ -54,6 +54,13 @@ public class VendingMachineTest {
         assertEquals("Chips: 1 Candy: 1", vendingMachine.dispenseItems(0,1,1));
     }
 
+    @Test
+    public void testWhenReturnChangeIsPassedADoubleItSplitsItIntoTheRightAmountOfChange(){
+        //Tests it returns quarters
+        assertEquals("Quarters: 1", vendingMachine.returnChange(.25));
+
+
+    }
 
 
 }

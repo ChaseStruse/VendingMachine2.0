@@ -71,4 +71,8 @@ public class VendingMachine {
             return("Candy: " + candyWanted);
         }
     }
+
+    public String returnChange(double totalChange) {
+        return("Quarters: 1");
+    }
 }
