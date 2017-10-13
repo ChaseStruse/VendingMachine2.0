@@ -13,26 +13,33 @@ public class VendingMachineTest {
     @Test
     public void testWhenWeighCoinIsPassedAIntItReturnsTheCorrectCoinWeight(){
         //For Quarters
-        assertEquals(5.67, vendingMachine.WeighCoin(1));
+        assertEquals(5.67, vendingMachine.weighCoin(1));
         //For Dimes
-        assertEquals(2.268, vendingMachine.WeighCoin(2));
+        assertEquals(2.268, vendingMachine.weighCoin(2));
         //For Nickels
-        assertEquals(5.0, vendingMachine.WeighCoin(3));
+        assertEquals(5.0, vendingMachine.weighCoin(3));
         //For Pennies
-        assertEquals(.088, vendingMachine.WeighCoin(4));
-
+        assertEquals(.088, vendingMachine.weighCoin(4));
     }
 
     @Test
     public void testWhenCoinValueIsPassedTheWeightOfACoinItReturnsTheValueOfThatCoin(){
         //For Quarters
-        assertEquals(.25, vendingMachine.CoinValue(vendingMachine.WeighCoin(1)));
+        assertEquals(.25, vendingMachine.coinValue(vendingMachine.weighCoin(1)));
         //For Dimes
-        assertEquals(.10, vendingMachine.CoinValue(vendingMachine.WeighCoin(2)));
+        assertEquals(.10, vendingMachine.coinValue(vendingMachine.weighCoin(2)));
         //For Nickels
-        assertEquals(.05, vendingMachine.CoinValue(vendingMachine.WeighCoin(3)));
+        assertEquals(.05, vendingMachine.coinValue(vendingMachine.weighCoin(3)));
         //For Pennies
-        assertEquals(0, vendingMachine.CoinValue(vendingMachine.WeighCoin(4)));
+        assertEquals(0, vendingMachine.coinValue(vendingMachine.weighCoin(4)));
     }
+
+    @Test
+    public void testWhenDispenseItemsIsPassedCertainItemsItReturnsTheCorrectString(){
+        //1 Cola 0 Chips 0 Candy
+        assertEquals("Cola: 1", vendingMachine.dispenseItems());
+    }
+
+
 
 }

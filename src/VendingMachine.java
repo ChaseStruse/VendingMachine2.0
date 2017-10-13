@@ -4,7 +4,7 @@
  */
 public class VendingMachine {
 
-    public double WeighCoin(int coinChoice) {
+    public double weighCoin(int coinChoice) {
         //Returns weight of Quarter
         if(coinChoice == 1){
             return(5.67);
@@ -27,7 +27,7 @@ public class VendingMachine {
 
     }
 
-    public double CoinValue(double coinWeight) {
+    public double coinValue(double coinWeight) {
         if(coinWeight == 5.67){
             return(.25);
         }
@@ -40,5 +40,9 @@ public class VendingMachine {
         else{
             return(0);
         }
+    }
+
+    public String dispenseItems() {
+        return("Cola: 1");
     }
 }
