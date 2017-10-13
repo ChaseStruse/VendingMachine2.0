@@ -149,7 +149,12 @@ public class VendingMachine {
             }
         }
         else if(productWanted.equalsIgnoreCase("Candy")){
-            return true;
+            if(_candyQuantity - quantityWanted >= 0) {
+                return true;
+            }
+            else{
+                return false;
+            }
         }
         else{
             return false;
