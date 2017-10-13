@@ -77,6 +77,8 @@ public class VendingMachineTest {
     public void testWhenMachineQuantityIsPassedACertainQuantityIfOutOfStockItWillReturnFalse(){
         //Tests to return true
         assertEquals(true, vendingMachine.machineQuantity(1, "Cola"));
+        //Tests to return true with chips
+        assertEquals(true,vendingMachine.machineQuantity(1,"Chips"));
     }
 
 
