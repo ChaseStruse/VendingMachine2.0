@@ -60,7 +60,12 @@ public class VendingMachine {
             }
         }
         else if(chipsWanted >= 1){
-            return("Chips: " + chipsWanted);
+            if(candyWanted >= 1){
+                return("Chips: " + chipsWanted + " Candy: " + candyWanted);
+            }
+            else {
+                return ("Chips: " + chipsWanted);
+            }
         }
         else{
             return("Candy: " + candyWanted);
