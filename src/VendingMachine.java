@@ -135,6 +135,9 @@ public class VendingMachine {
         else if(productWanted.equalsIgnoreCase("Chips")){
             return true;
         }
+        else if(productWanted.equalsIgnoreCase("Candy")){
+            return true;
+        }
         else{
             return false;
         }
