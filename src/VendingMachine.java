@@ -47,6 +47,9 @@ public class VendingMachine {
             if(chipsWanted >= 1){
                 return ("Cola: " + colasWanted + " Chips: " + chipsWanted);
             }
+            else if(candyWanted >= 1){
+                return("Cola: " + colasWanted + " Candy: " + candyWanted);
+            }
             else {
                 return ("Cola: " + colasWanted);
             }
