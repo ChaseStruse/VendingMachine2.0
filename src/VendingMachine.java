@@ -75,30 +75,46 @@ public class VendingMachine {
     public String returnChange(double totalChange) {
         int _quarters = 0, _dimes = 0, _nickels = 0;
 
-        if(totalChange >= .25) {
-            _quarters++;
-            totalChange-=.25;
-        }
-        else if(totalChange >= .1 && totalChange < .25){
-            _dimes++;
-            totalChange-=.10;
-        }
-        else if(totalChange >= .05 && totalChange < .10){
-            _nickels++;
-            totalChange-=.05;
-        }
-        else{
-            return(null);
+        while(totalChange > 0) {
+
+            if (totalChange >= .25) {
+                _quarters++;
+                totalChange -= .25;
+            }
+            else if (totalChange >= .1 && totalChange < .25) {
+                _dimes++;
+                totalChange -= .10;
+            }
+            else if (totalChange >= .05 && totalChange < .10) {
+                _nickels++;
+                totalChange -= .05;
+            }
+            else {
+                return (null);
+            }
+
+            //Odd error when subtracting doubles so this rounds
+            if(totalChange < .1 && totalChange > .09){
+                totalChange=.1;
+            }
+            else if(totalChange <.05 && totalChange >.04){
+                totalChange=.05;
+            }
         }
 
-        if(_quarters >= 1){
-            return("Quarters: " + _quarters);
+        if (_quarters >= 1) {
+            if(_dimes >= 1){
+                return("Quarters: " + _quarters + " Dimes: " + _dimes);
+            }
+            return ("Quarters: " + _quarters);
+
         }
-        else if(_dimes >= 1){
+        else if (_dimes >= 1) {
             return ("Dimes: " + _dimes);
         }
-        else{
-            return("Nickels: " + _nickels);
+        else {
+            return ("Nickels: " + _nickels);
         }
+
     }
 }

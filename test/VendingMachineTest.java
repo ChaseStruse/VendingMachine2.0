@@ -63,6 +63,9 @@ public class VendingMachineTest {
         //Tests it returns nickels
         assertEquals("Nickels: 1", vendingMachine.returnChange(.05));
 
+        //Tests that it can return quarters and dimes
+        assertEquals("Quarters: 1 Dimes: 1", vendingMachine.returnChange(.35));
+
 
     }
 
