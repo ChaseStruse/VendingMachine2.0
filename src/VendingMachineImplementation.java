@@ -88,7 +88,20 @@ public class VendingMachineImplementation{
             System.out.println("Current total: $" + formatMoney.format(total));
         }
 
+        /*
+        *
+        *  Loop will be the payment screen.
+        *
+         */
 
+        while(total > 0){
+            machine.outputPaymentScreen();
+            userSelection = userInput.nextInt();
+
+            total-= machine.coinValue(machine.weighCoin(userSelection));
+
+            System.out.println("Total: $" + formatMoney.format(total));
+        }
 
     }
 }
