@@ -4,4 +4,7 @@
  */
 public class VendingMachine {
 
+    public double WeighCoin(int i) {
+        return(5.67);
+    }
 }
