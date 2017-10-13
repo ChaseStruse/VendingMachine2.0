@@ -90,7 +90,7 @@ public class VendingMachine {
                 totalChange -= .05;
             }
             else {
-                return (null);
+                break;
             }
 
             //Odd error when subtracting doubles so this rounds
@@ -104,7 +104,12 @@ public class VendingMachine {
 
         if (_quarters >= 1) {
             if(_dimes >= 1){
-                return("Quarters: " + _quarters + " Dimes: " + _dimes);
+                if(_nickels >= 1){
+                    return("Quarters: " + _quarters + " Dimes: " + _dimes + " Nickels: " + _nickels);
+                }
+                else {
+                    return ("Quarters: " + _quarters + " Dimes: " + _dimes);
+                }
             }
             else if(_nickels >= 1){
                 return("Quarters: " + _quarters + " Nickels: " + _nickels);
