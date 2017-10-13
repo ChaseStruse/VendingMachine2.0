@@ -26,4 +26,8 @@ public class VendingMachine {
         }
 
     }
+
+    public double CoinValue(double coinWeight) {
+        return(.25);
+    }
 }
