@@ -106,7 +106,12 @@ public class VendingMachine {
             if(_dimes >= 1){
                 return("Quarters: " + _quarters + " Dimes: " + _dimes);
             }
-            return ("Quarters: " + _quarters);
+            else if(_nickels >= 1){
+                return("Quarters: " + _quarters + " Nickels: " + _nickels);
+            }
+            else {
+                return ("Quarters: " + _quarters);
+            }
 
         }
         else if (_dimes >= 1) {
