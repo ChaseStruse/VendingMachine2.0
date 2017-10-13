@@ -88,12 +88,7 @@ public class VendingMachineImplementation{
             System.out.println("Current total: $" + formatMoney.format(total));
         }
 
-        /*
-        *
-        *  Loop will be the payment screen.
-        *
-         */
-
+        //Payment Screen
         while(total > 0){
             machine.outputPaymentScreen();
             userSelection = userInput.nextInt();
@@ -102,6 +97,15 @@ public class VendingMachineImplementation{
 
             System.out.println("Total: $" + formatMoney.format(total));
         }
+
+        System.out.println("");
+        System.out.println("Change: " + machine.returnChange(total*-1));
+        System.out.println("");
+        System.out.println("Dispensing........");
+        System.out.println("");
+        System.out.println(machine.dispenseItems(colaWanted,chipsWanted,candyWanted));
+        System.out.println("");
+        System.out.println("Items have been dispensed. Have a good day");
 
     }
 }

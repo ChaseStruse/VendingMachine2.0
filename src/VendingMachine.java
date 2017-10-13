@@ -134,7 +134,7 @@ public class VendingMachine {
         }
         else if (_dimes >= 1) {
             if(pennies >=1){
-                return ("Dimes: " + _dimes + "Pennies: " +pennies);
+                return ("Dimes: " + _dimes + " Pennies: " +pennies);
             }
             else {
                 return ("Dimes: " + _dimes);
